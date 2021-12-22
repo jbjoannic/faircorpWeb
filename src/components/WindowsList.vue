@@ -1,7 +1,6 @@
 <template>
   
   <div class="windows-list pt-3" v-show="show=='1'">
-    <p>ID{{roomFilterIdProp}}</p>
     <room-filter
         @room-filtered="updateFilterRoom"></room-filter>
     <windows-list-item 

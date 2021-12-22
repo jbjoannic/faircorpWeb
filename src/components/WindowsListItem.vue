@@ -1,5 +1,5 @@
 <template>
-  <div class="window border border-secondary rounded p-2 mb-2" :class="{expanded: isExpanded}">
+  <div class="window border border-secondary rounded p-2 mb-2" :class="{expanded: isExpanded}"  @mouseover="hover=true" @mouseleave="hover=false">
     <div class="top-row d-flex" @click="toggleExpand" @mouseover="hover=true" @mouseleave="hover=false">
       <div class="window-name fw-bold pe-3">{{window.name}}</div>
       <div class="room-name text-muted">{{window.roomName}}</div>
@@ -87,6 +87,9 @@ export default {
   .top-row {
     cursor: pointer;
   }
+}
+.top-row {
+  overflow: auto;
 }
 .room-name{
   margin-right: 8px;

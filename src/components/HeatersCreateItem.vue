@@ -86,4 +86,7 @@ export default {
     cursor: pointer;
   }
 }
+.details{
+  overflow: auto;
+}
 </style>
