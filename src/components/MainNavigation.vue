@@ -21,10 +21,21 @@
 <script>
 export default {
   name: 'MainNavigation',
+  props: {
+    activeAskedProp:{type:String}
+  },
   data: function() {
     return {
-      active: "1"
+      active: "1",
+      activeAsked:'1'
     }
+  },
+  created: function() {
+    this.activeAsked=this.activeAskedProp;
+  },
+  
+  watch : {
+    activeAsked:"changeAsked"
   },
   computed: { 
     activeClass1: function() {
@@ -42,6 +53,9 @@ export default {
   },
   
   methods: {
+    changeAsked() {
+      this.active=this.activeAsked;
+    },
     click1() {
       this.$emit('nav-updated', "1");
       this.active='1';
@@ -61,3 +75,12 @@ export default {
   }
 }
 </script>
+<style lang="scss" scoped>
+.nav-link{
+  color: green;
+
+  &.active {
+    color:black;
+  }
+}
+</style>

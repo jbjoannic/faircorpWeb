@@ -87,4 +87,10 @@ export default {
 .details{
   overflow: auto;
 }
+.window{
+  background-color: green;
+}
+.btn-secondary{
+  background-color: rgba(221, 255, 169, 0.63);
+}
 </style>

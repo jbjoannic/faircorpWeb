@@ -6,7 +6,8 @@
 
     <section class="main-content w-50 mx-auto" :key="componentKey">
       <main-navigation
-        @nav-updated="updateNav"></main-navigation>
+        @nav-updated="updateNav"
+        :activeAskedProp="valShow"></main-navigation>
       <windows-list :show="valShow" :roomFilterIdProp="valRoom"
       @window-updated=update></windows-list>
       <heaters-list :show="valShow" :roomFilterIdProp="valRoom"
@@ -76,12 +77,16 @@ export default {
 
 <style lang="scss" scoped>
 #app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
-}
+  padding-top: 60px;
+  background-color: rgba(221, 255, 169, 0.63);;
 
+}
+.title {
+  font-size: 40px;
+}
 </style>

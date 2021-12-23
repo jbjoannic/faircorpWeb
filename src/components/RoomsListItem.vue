@@ -71,6 +71,9 @@ export default {
     color: #dc3545;
   }
 }
+.btn-secondary {
+  background-color: green;
+}
 .btn-danger{
   margin-right: 8px;
 }

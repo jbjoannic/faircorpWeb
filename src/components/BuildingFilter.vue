@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div class="filter">
+    <span>Filter :</span>
     <select @change="updateBuilding" v-model="buildingFilterId">
         <option disabled value="">Select Building</option>
         <option value="all">AllBuildings</option>
@@ -32,3 +33,9 @@ export default {
     
 }
 </script>
+<style scoped>
+.filter{
+    display: -webkit-inline-flex;
+    align-items:center;
+}
+</style>
