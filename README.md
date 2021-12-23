@@ -29,5 +29,6 @@ See [Configuration Reference](https://cli.vuejs.org/config/).
 - access all data from the web api (buildings, rooms, heaters, windows)
 - manage ressources by switching, deleting, creating and filtering the data
 ```
+```
 Error: No errors in the website, but in the function delete on buildings when the rooms are empty, if they are not, it works fine
 ```
